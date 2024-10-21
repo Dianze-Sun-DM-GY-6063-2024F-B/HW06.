@@ -1,60 +1,12 @@
-# p5.js Template
+In this project, I utilized the health data representing tree health conditions, along with the longitude and latitude data, to create a geolocation-based visualization. By mapping this data to the screen's width and height, I generated a map-like interface where each tree is represented by a different shape and color based on its health status.
 
-This is a README file that can be used to describe and document your assignment.
+I first analyzed the ranges of longitude and latitude in Excel to ensure that they could be properly mapped onto the canvas dimensions. Using p5.js's map() function, I converted these geocoordinates into positions on the screen, accurately displaying each tree's location on the map.
 
-Markdown Cheatsheet (from [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/)):
+I decided to dynamically adjust the shape and color of the visual representation based on the health condition (health data) of each tree:
 
----
----
+For trees in good health, I used green circles to symbolize vitality.
+For trees in fair condition, I used white circles to indicate a moderate health status.
+For trees in poor condition, I not only changed the color to yellow but also modified the shape to squares, making unhealthy trees stand out more prominently.
+Using p5.js’s loadTable() function, I loaded the CSV data containing longitude, latitude, and health status. I then used the map() function to convert the geographical coordinates into X and Y positions on the canvas, ensuring accurate placement of each tree.
 
-# Heading1
-## Heading2
-### Heading3
-#### Heading4
-##### Heading5
-###### Heading6
-
-**bold text**
-
-*italicized text*
-
-~~strikethrough text~~
-
-Ordered List:
-1. First item
-2. Second item
-3. Third item
-
-Unordered List:
-- First item
-- Second item
-- Third item
-
-`short code block`
-
-```
-extended code block
-fun() {
-  return 0
-}
-```
-
-Link:  
-[linked text](https://www.example.com)
-
-
-Image with url:  
-![image description](https://dm-gy-6063-2024f-b.github.io/assets/homework/02/clark-espaco-modulado-00.jpg)
-
-
-Image on repo:  
-![image description](./file-name.jpg)
-
-
-To start a new line, add two spaces at the end of a line, like this:  
-this is a new line.
-
-
-To start a new paragraph, leave an empty line between two lines of text.
-
-This is a new paragraph.
+While rendering each data point, I assigned different colors and shapes based on the health value. Trees with a good or fair status were represented by circles in green and white, respectively, whereas trees with a poor status were depicted as yellow squares, making them more visually distinct.

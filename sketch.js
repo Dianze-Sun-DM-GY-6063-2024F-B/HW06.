@@ -19,7 +19,7 @@ if(c=="Good"){
   push();
   strokeWeight(0.5);
   stroke(Tcolor);
-ellipse(posx,posY,30);
+ellipse(posx,posY,5);
 pop();
 }
 if(c=="Fair"){
@@ -27,7 +27,7 @@ if(c=="Fair"){
   push();
   strokeWeight(0.5);
   stroke(Tcolor);
-ellipse(posx,posY,20);
+ellipse(posx,posY,5);
 pop();
 }
 if(c=="Poor"){
@@ -35,7 +35,7 @@ if(c=="Poor"){
   push();
   strokeWeight(0.7);
   stroke(Tcolor);
-rect(posx,posY,60);
+rect(posx,posY,10);
 pop();
 }
 
